@@ -1,0 +1,90 @@
+HTML CSSResult
+EDIT ON
+body {
+  
+  /* background: #151515; */
+  margin: 2rem 0;
+  background-position: top left, top right;
+  color: #14B51B;
+  font-family: 'Source Code Pro', monospace;
+  font-family: 'Exo 2', sans-serif;
+  text-shadow: 0 0 4px #14B51B;
+  
+}
+body:after {
+  /* the video interlace effect overlaying everything - feel free to remove it */
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 80%);
+  background-size: 5px 3px;
+  display: block;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; */
+}
+
+.containermain {
+  
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 80%);
+  background-size: 5px 3px;
+  max-width: 1000px;
+  margin-top: 30px;
+  /* margin: 0 auto; */
+  border:1px solid rgb(97, 97, 97);
+  max-height: 489px;;
+  background-color: #28c500;
+}
+
+.vital{
+  border: 1px solid rgb(97, 97, 97);;
+}
+.uiBack {
+  stroke: white;
+  stroke-opacity: 0.18;
+  stroke-width: 1;
+}
+
+.clocksize{
+  font-size: 16px;
+  text-align: center;
+
+}
+.signalsize{
+  font-size: 16px;
+  text-align: center;
+
+}
+.number-3 {
+  font-size: 3rem;
+  text-align: center;
+  color: rgb(206, 247, 200);
+}
+.number-2 {
+  font-size: 2rem;
+  text-align: center;
+}
+.number-1 {
+  font-size: 5rem;
+  text-align: center;
+}
+.number-1 span {
+  font-size: 2rem;
+  position: relative;
+  top: -2rem;
+  opacity: 1;
+  animation: beat .5s infinite;
+}
+
+
+@keyframes beat {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 1;
+  }
+}

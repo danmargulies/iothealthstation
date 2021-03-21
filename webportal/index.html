@@ -1,0 +1,110 @@
+<html>
+
+<head>
+  <title>IoTHealthStation Remote Viewer</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <script src="ts.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css.css" />
+
+
+</head>
+
+<body style="background-color: #27443d;" onload="init();">
+
+
+  <div class="container containermain">
+
+    <div class="row">
+      <!-- main console -->
+      <div class="col-8">
+        <!-- patient details-->
+        <div class="row">
+          <div class="col-12"><span class="number-2" id="patientname">-</span></div>
+        </div>
+        <div class="row">
+          <div class="col-12"><span class="number-2" id="patientmrn">-</span></div>
+        </div>
+     
+        <div class="row" style="margin-top:350px">
+          <div class="col-6"><span class="clocksize" id="clock">-</span></div>
+          <div class="col-6"><span class="signalsize" id="lastdetected">-</span></div>
+        </div>
+
+      </div>
+      <div class="col-4" style="padding: 0;">
+        <!-- patient vitals-->
+        <div class="row">
+          <div class="col-12">
+            <div id="bpm-1" class="number-1 vital">-<span>&#9829;</span></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div id="ox-1" class="number-1 vital">-<span>&#37;</span></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div id="temp-1" class="number-1 vital">-<span>&#176;</span></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div id="hum-1" class="number-1 vital">-<span>&#8362;</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm">
+        <canvas id="myChart2" style="display: block; height: 400px; width: 400px;" class="chartjs-render-monitor"
+          width="400" height="400"></canvas>
+      </div>
+      <div class="col-sm">
+        <canvas id="myChart" style="display: block; height: 278px; width: 556px;" class="chartjs-render-monitor"
+          width="400" height="400"></canvas>
+      </div>
+
+    </div>
+  </div> <!-- end main console -->
+
+  <div class="container" style="width: 1000px; margin-top: 50px;">
+    <div class="row" id="11115555" onclick="getPatient(this.id)">  <!-- modify patient 1 id to match value from IoTHealthStation -->
+      <div class="col-2">
+        <svg width="3em" height="5em" viewBox="0 0 16 16" class="bi bi-file-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
+        </svg>
+        
+      </div>
+      <div class="col-4" >
+       <span class="number-3">Patient 1</span> <!-- Provide Patient Name for the Remote Viewer GUI -->
+        
+      </div>
+    </div>
+    <div class="row" id="98524873" onclick="getPatient(this.id)"> <!-- modify patient 1 id to match value from IoTHealthStation -->
+      <div class="col-2">
+        <svg width="3em" height="5em" viewBox="0 0 16 16" class="bi bi-file-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
+        </svg>
+        
+      </div>
+      <div class="col-4">
+        <span class="number-3">Patient 2</span>  <!-- Provide Patient Name for the Remote Viewer GUI -->
+        
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <div id="log"></div>
+
+
+
+</body>
+
+</html>
+

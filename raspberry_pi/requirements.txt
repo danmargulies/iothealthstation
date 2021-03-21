@@ -1,0 +1,4 @@
+Adafruit_DHT
+RPI.GPIO
+smbus2
+AWSIoTPythonSDK
