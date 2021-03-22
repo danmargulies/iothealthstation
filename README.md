@@ -1,5 +1,5 @@
 # IoTHealthStation
-Code that accompanies an AWS blog post showing how a builder can connect a Raspberry Pi hosted sensor (max30102) in this case to the cloud to be processed. Please see this post: ___ for more information!
+Code that accompanies an AWS blog post showing how a builder can connect a Raspberry Pi hosted sensor (max30102) in this case to the cloud to be processed. Please see this post: for more information!
 
 # Bill of Materials:
 * Raspberry Pi WH
@@ -22,10 +22,3 @@ Code that accompanies an AWS blog post showing how a builder can connect a Raspb
 # Libraries Used:
 * [https://github.com/doug-burrell/max30102](https://github.com/doug-burrell/max30102)
 * [https://github.com/Pithikos/python-websocket-server](https://github.com/Pithikos/python-websocket-server)
-
-# Punch List
-- iothealthstation.py None type error handling or approach on if is none
-- button/light logic
-- add print connect to message
-- deal with sequence
-- parameterize connect into config file (look at piot)
